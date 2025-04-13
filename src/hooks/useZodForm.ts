@@ -17,7 +17,7 @@ export function useZodForm<T extends FormFields[]>(
     resolver: zodResolver(schema),
     defaultValues: initialValues || {},
     values: initialValues || {},
-    mode: "onSubmit",
+    mode: "onChange",
     ...formOptions
   } as any);
 }
