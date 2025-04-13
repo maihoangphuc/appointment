@@ -1,0 +1,117 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer base {
+  :root {
+    --bg: theme('colors.light.bg');
+    --text: theme('colors.light.text');
+    --border: theme('colors.light.border');
+    --primary: theme('colors.light.primary');
+    --card-bg: theme('colors.light.card.bg');
+    --card-text: theme('colors.light.card.text');
+    --sidebar-bg: theme('colors.light.sidebar.bg');
+    --sidebar-text: theme('colors.light.sidebar.text');
+    --sidebar-border: theme('colors.light.sidebar.border');
+    --scrollbar-thumb: theme('colors.light.scrollbar.thumb');
+    --scrollbar-thumb-hover: theme('colors.light.scrollbar.thumbHover');
+    --scrollbar-track: theme('colors.light.scrollbar.track');
+    --scrollbar-button: theme('colors.light.scrollbar.button');
+    --scrollbar-button-hover: theme('colors.light.scrollbar.buttonHover');
+    --modal-scrollbar-thumb: theme('colors.light.scrollbar.thumb');
+    --modal-scrollbar-track: theme('colors.light.scrollbar.track');
+    --sidebar-scrollbar-thumb: theme('colors.light.scrollbar.thumb');
+    --sidebar-scrollbar-track: theme('colors.light.scrollbar.track');
+  }
+
+  .dark {
+    --bg: theme('colors.dark.bg');
+    --text: theme('colors.dark.text');
+    --border: theme('colors.dark.border');
+    --primary: theme('colors.dark.primary');
+    --card-bg: theme('colors.dark.card.bg');
+    --card-text: theme('colors.dark.card.text');
+    --sidebar-bg: theme('colors.dark.sidebar.bg');
+    --sidebar-text: theme('colors.dark.sidebar.text');
+    --sidebar-border: theme('colors.dark.sidebar.border');
+    --scrollbar-thumb: theme('colors.dark.scrollbar.thumb');
+    --scrollbar-thumb-hover: theme('colors.dark.scrollbar.thumbHover');
+    --scrollbar-track: theme('colors.dark.scrollbar.track');
+    --scrollbar-button: theme('colors.dark.scrollbar.button');
+    --scrollbar-button-hover: theme('colors.dark.scrollbar.buttonHover');
+    --modal-scrollbar-thumb: theme('colors.dark.scrollbar.thumb');
+    --modal-scrollbar-track: theme('colors.dark.scrollbar.track');
+    --sidebar-scrollbar-thumb: theme('colors.dark.scrollbar.thumb');
+    --sidebar-scrollbar-track: theme('colors.dark.scrollbar.track');
+  }
+}
+
+body::-webkit-scrollbar {
+  width: 16px;
+  height: 16px;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: var(--scrollbar-track);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-thumb);
+  border-radius: 8px;
+  border: 3px solid var(--scrollbar-track);
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background-color: var(--scrollbar-thumb-hover);
+}
+
+body::-webkit-scrollbar-button {
+  background-color: var(--scrollbar-button);
+  height: 16px;
+  width: 16px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+body::-webkit-scrollbar-button:hover {
+  background-color: var(--scrollbar-button-hover);
+}
+
+body::-webkit-scrollbar-button:vertical:decrement {
+  background-color: var(--scrollbar-button);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24'%3E%3Cpolygon points='12,8 6,14 18,14' fill='%23ffffff'/%3E%3C/svg%3E");
+}
+
+body::-webkit-scrollbar-button:vertical:increment {
+  background-color: var(--scrollbar-button);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24'%3E%3Cpolygon points='12,16 6,10 18,10' fill='%23ffffff'/%3E%3C/svg%3E");
+}
+
+[role="dialog"] ::-webkit-scrollbar,
+[data-sidebar="sidebar"] ::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+[role="dialog"] ::-webkit-scrollbar-track,
+[data-sidebar="sidebar"] ::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+[role="dialog"] ::-webkit-scrollbar-thumb,
+[data-sidebar="sidebar"] ::-webkit-scrollbar-thumb {
+  background-color: var(--sidebar-scrollbar-thumb);
+  border-radius: 0;
+  border: none;
+}
+
+[role="dialog"] ::-webkit-scrollbar-button,
+[data-sidebar="sidebar"] ::-webkit-scrollbar-button {
+  display: none;
+}
